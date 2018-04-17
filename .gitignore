@@ -2,9 +2,14 @@
 archive
 mergedpsid.dta
 occ_ind_reg_data
-inheritance_code
+inheritance_code_results
 regression_code_results
 temp.csv
+
+# exclude everything in data except dummy file
+data/*
+!data/.gitkeep
+
 
 # Created by https://www.gitignore.io/api/macos,python
 
