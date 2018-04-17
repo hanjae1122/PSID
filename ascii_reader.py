@@ -38,7 +38,7 @@ class ascii_:
         """Reads SPS index file using indices stored in 'inds'.
         'inds' is used to parse the PSID raw ascii .txt file,
         which is given in fixed format.
-        For more info on the file format,
+        For more info on ascii file formats,
         refer to: http://wlm.userweb.mwn.de/SPSS/wlmsrrd.htm
         """
         with open(self._get_index_path(), 'r') as f:
