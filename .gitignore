@@ -5,6 +5,7 @@ occ_ind_reg_data
 inheritance_code_results
 regression_code_results
 temp.csv
+README.org
 
 # exclude everything in data except dummy file
 data/*
