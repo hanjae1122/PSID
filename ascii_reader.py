@@ -48,7 +48,7 @@ class ascii_:
             # 3) variable labels
             for i, raw_line in enumerate(raw_data):
                 line = re.sub('\s+', ' ', raw_line).strip()
-                if line == 'DATA LIST FILE = PSID FIXED /':
+                if re.match('^DATA LIST FILE = ', line):
                     i_index = i + 1
                 if line == 'FORMATS':
                     i_format = i + 1
@@ -119,8 +119,10 @@ class ascii_:
                     line[inds[i]:inds[i + 1]] for i in range(len(inds) - 1)
                 ]
                 for i, h in enumerate(headers):
+                    if split_line[i].strip() == '':
+                        split_data.append(None)
                     # checks if data is integer or float
-                    if h in lab2format and '.' in lab2format[h]:
+                    elif h in lab2format and '.' in lab2format[h]:
                         split_data.append(float(split_line[i]))
                     else:
                         split_data.append(int(split_line[i]))
