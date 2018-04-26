@@ -14,6 +14,7 @@ numpy = "*"
 statsmodels = "*"
 jupyter = "*"
 openpyxl = "*"
+matplotlib = "*"
 
 [dev-packages]
 
